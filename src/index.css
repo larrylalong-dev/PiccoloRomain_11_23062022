@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #ff6060;
+    --lightgrey-color: #f6f6f6;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
