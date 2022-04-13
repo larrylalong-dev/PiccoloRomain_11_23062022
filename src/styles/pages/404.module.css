@@ -1,0 +1,40 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--primary-color);
+    height: 100%;
+}
+
+.errorLabel {
+    font-weight: 700;
+    font-size: 18rem;
+}
+
+.errorInfo {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.errorLink {
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 575.98px) {
+    .errorLabel {
+        font-size: 6rem;
+    }
+
+    .errorInfo {
+        font-size: 1.2rem;
+        width: 65%;
+        text-align: center;
+    }
+
+    .errorLink {
+        font-size: 0.8rem;
+    }
+}

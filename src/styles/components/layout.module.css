@@ -1,9 +1,26 @@
 .layout {
-    padding: 2rem 3rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    padding: var(--desktop-padding);
+    flex: 1;
+}
+
+.main {
+    padding: var(--desktop-padding);
+    flex: 4;
+}
+
+.footer {
+    flex: 1;
 }
 
 @media (max-width: 575.98px) {
-    .layout {
-        padding: 1rem 1.5rem 0 1.5rem;
+    .header,
+    .main {
+        padding: var(--mobile-padding);
     }
 }

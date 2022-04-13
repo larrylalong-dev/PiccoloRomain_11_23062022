@@ -6,13 +6,13 @@ function Layout({ children }) {
     return (
         <>
             <div className={styles.layout}>
-                <div>
+                <div className={styles.header}>
                     <Header />
                 </div>
-                <main>{children}</main>
-            </div>
-            <div>
-                <Footer />
+                <main className={styles.main}>{children}</main>
+                <div className={styles.footer}>
+                    <Footer />
+                </div>
             </div>
         </>
     );

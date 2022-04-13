@@ -1,6 +1,8 @@
 :root {
     --primary-color: #ff6060;
     --lightgrey-color: #f6f6f6;
+    --desktop-padding: 0 3rem 0 3rem;
+    --mobile-padding: 0 1.5rem 0 1.5rem;
 }
 
 body {
