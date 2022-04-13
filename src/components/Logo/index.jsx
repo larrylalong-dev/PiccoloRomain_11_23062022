@@ -1,12 +1,15 @@
 import logoLight from '../../assets/logo_light.svg';
 import logoDark from '../../assets/logo_dark.svg';
+import styles from '../../styles/components/logo.module.css';
 
-function Logo({ darkmode, width }) {
+function Logo({ darkmode }) {
+    const logoStyle = darkmode ? styles.darklogo : styles.logo;
+
     return (
         <div>
             <img
                 src={darkmode ? logoDark : logoLight}
-                width={width}
+                className={logoStyle}
                 alt="Kasa Logo"
             />
         </div>
@@ -15,7 +18,6 @@ function Logo({ darkmode, width }) {
 
 Logo.defaultProps = {
     darkmode: false,
-    width: '200px',
 };
 
 export default Logo;

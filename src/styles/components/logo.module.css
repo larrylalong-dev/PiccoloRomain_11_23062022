@@ -1,0 +1,13 @@
+.logo {
+    width: 200px;
+}
+
+.darklogo {
+    width: 100px;
+}
+
+@media (max-width: 575.98px) {
+    .logo {
+        width: 150px;
+    }
+}
