@@ -4,6 +4,7 @@
 
 .darklogo {
     width: 100px;
+    padding: 1.5rem 0 1.5rem 0;
 }
 
 @media (max-width: 575.98px) {
