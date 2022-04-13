@@ -1,12 +1,14 @@
-import lightLogo from '../../assets/logo_light.png';
-import darklogo from '../../assets/logo_dark.png';
+import logoLight from '../../assets/logo_light.svg';
+import logoDark from '../../assets/logo_dark.svg';
 
 function Logo({ darkmode, width }) {
-    const logo = darkmode ? darklogo : lightLogo;
-
     return (
-        <div className="logo-container">
-            <img src={logo} width={width} alt="Kasa Logo" />
+        <div>
+            <img
+                src={darkmode ? logoDark : logoLight}
+                width={width}
+                alt="Kasa Logo"
+            />
         </div>
     );
 }
