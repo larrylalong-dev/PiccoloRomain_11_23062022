@@ -10,6 +10,7 @@
     padding: 0px 1rem 0px 1rem;
     color: var(--primary-color);
     font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .link:last-child {
@@ -18,4 +19,10 @@
 
 .link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+    .link {
+        font-size: 0.8rem;
+    }
 }
