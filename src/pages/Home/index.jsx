@@ -28,7 +28,10 @@ function Home() {
     }, []);
     return (
         <div className={styles.home}>
-            <Tag />
+            <div style={{ display: 'flex' }}>
+                <Tag label="dqsdddddddddddddd" />
+                <Tag label="dsdf" />
+            </div>
             ------
             <DropdownList label="Equipements" itemsList={test} />
             <DropdownText
