@@ -4,6 +4,8 @@ import DropdownText from '../../components/DropdownText';
 import Gallery from '../../components/Gallery';
 import Tag from '../../components/Tag';
 import styles from '../../styles/pages/home.module.css';
+import bg from '../../assets/background_home.svg';
+import Banner from '../../components/Banner';
 
 const test = [
     'Équipements de base',
@@ -28,6 +30,7 @@ function Home() {
     }, []);
     return (
         <div className={styles.home}>
+            <Banner imgSrc={bg} label="Chez vous, partout et ailleurs" />
             <div style={{ display: 'flex' }}>
                 <Tag label="dqsdddddddddddddd" />
                 <Tag label="dsdf" />

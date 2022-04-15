@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 223px;
+}
+
+.bannerImg {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.bannerLabelContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.bannerLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    color: white;
+    font-weight: 500;
+    font-size: 3rem;
+}
