@@ -1,0 +1,37 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.arrow {
+    width: 1rem;
+    cursor: pointer;
+}
+
+.list {
+    position: relative;
+    top: -10px;
+    background-color: var(--lightgrey-color);
+    padding: 20px 10px 10px 10px;
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+    color: var(--primary-color);
+}
+
+.dblock {
+    display: block;
+}
+
+.dnone {
+    display: none;
+}

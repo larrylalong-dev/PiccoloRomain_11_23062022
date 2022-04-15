@@ -1,0 +1,30 @@
+.card {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    cursor: pointer;
+}
+.cardImg {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+@media (max-width: 575.98px) {
+    .card {
+        width: 100%;
+        height: 255px;
+    }
+}

@@ -1,0 +1,26 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    background-color: var(--lightgrey-color);
+    border-radius: 25px;
+}
+
+@media (max-width: 991.98px) {
+    .gallery {
+        padding: 0;
+        gap: auto;
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
