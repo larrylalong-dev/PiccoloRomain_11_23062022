@@ -28,3 +28,15 @@
     font-weight: 500;
     font-size: 3rem;
 }
+
+@media (max-width: 991.98px) {
+    .banner {
+        height: 111px;
+    }
+
+    .bannerLabel {
+        font-weight: 500;
+        font-size: 24px;
+        padding: 1rem;
+    }
+}
