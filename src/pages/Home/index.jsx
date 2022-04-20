@@ -41,7 +41,7 @@ function Home() {
                 ------
                 <Slider pictures={data[0].pictures} />
                 ------
-                <Rating rate={2} />
+                <Rating rate={3} />
                 ------
                 <DropdownList label="Equipements" itemsList={test} />
                 <DropdownText

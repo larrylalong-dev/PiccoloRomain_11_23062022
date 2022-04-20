@@ -1,3 +1,18 @@
 .rating {
     display: flex;
+    gap: 0.4rem;
+}
+
+.star {
+    width: 30px;
+}
+
+@media (max-width: 575.98px) {
+    .rating {
+        gap: 0.3rem;
+    }
+
+    .star {
+        width: 15px;
+    }
 }

@@ -1,15 +1,21 @@
 import styles from '../../styles/components/rating.module.css';
-import star from '../../assets/filled_star.svg';
-// import emptyStar from '../../assets/empty_star.svg';
+import Star from '../Star';
 
 function Rating({ rate = 0 }) {
-    const filledStar = Array(rate);
-    console.log(filledStar);
+    const starArray = [];
+    for (let index = 0; index < 5; index++) {
+        index < rate ? starArray.push('fill') : starArray.push('empty');
+    }
+
     return (
         <div className={styles.rating}>
-            {/* {filledStar.map(star, (index) => (
-                <img key={index} src={star} alt="index" />
-            ))} */}
+            {starArray.map((starType, index) =>
+                starType === 'fill' ? (
+                    <Star key={index} fill />
+                ) : (
+                    <Star key={index} />
+                )
+            )}
         </div>
     );
 }
