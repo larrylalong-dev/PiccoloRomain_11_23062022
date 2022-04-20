@@ -1,3 +1,4 @@
+import styles from '../../styles/components/star.module.css';
 import star from '../../assets/filled_star.svg';
 import emptyStar from '../../assets/empty_star.svg';
 
@@ -5,9 +6,9 @@ function Star({ fill = false }) {
     return (
         <>
             {fill ? (
-                <img src={star} alt="star" />
+                <img className={styles.star} src={star} alt="star" />
             ) : (
-                <img src={emptyStar} alt="emptyStar" />
+                <img className={styles.star} src={emptyStar} alt="emptyStar" />
             )}
         </>
     );

@@ -1,0 +1,11 @@
+.star {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 575.98px) {
+    .star {
+        width: 15px;
+        height: 15px;
+    }
+}
