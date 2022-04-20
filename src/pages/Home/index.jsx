@@ -8,6 +8,7 @@ import bg from '../../assets/background_home.svg';
 import Banner from '../../components/Banner';
 import Slider from '../../components/Slider';
 import Rating from '../../components/Rating';
+import Avatar from '../../components/Avatar';
 
 const test = [
     'Équipements de base',
@@ -27,6 +28,7 @@ function Home() {
             const jsonResult = await result.json();
             setData(jsonResult);
             setLoading(false);
+            console.log(jsonResult);
         };
         fetchData();
     }, []);
@@ -42,6 +44,8 @@ function Home() {
                 <Slider pictures={data[0].pictures} />
                 ------
                 <Rating rate={3} />
+                ------
+                <Avatar host={data[0].host} />
                 ------
                 <DropdownList label="Equipements" itemsList={test} />
                 <DropdownText
