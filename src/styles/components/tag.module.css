@@ -4,7 +4,14 @@
     align-items: center;
     background-color: var(--primary-color);
     height: 25px;
+    min-width: 115px;
     border-radius: 50px;
     color: white;
     padding: 0 10px 0 10px;
+}
+
+@media (max-width: 575.98px) {
+    .tag {
+        min-width: 84px;
+    }
 }

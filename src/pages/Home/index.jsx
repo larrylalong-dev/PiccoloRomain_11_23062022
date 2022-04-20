@@ -7,6 +7,7 @@ import styles from '../../styles/pages/home.module.css';
 import bg from '../../assets/background_home.svg';
 import Banner from '../../components/Banner';
 import Slider from '../../components/Slider';
+import Rating from '../../components/Rating';
 
 const test = [
     'Équipements de base',
@@ -39,6 +40,9 @@ function Home() {
                 </div>
                 ------
                 <Slider pictures={data[0].pictures} />
+                ------
+                <Rating rate={2} />
+                ------
                 <DropdownList label="Equipements" itemsList={test} />
                 <DropdownText
                     label="Description"

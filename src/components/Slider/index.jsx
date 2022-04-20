@@ -3,18 +3,18 @@ import prev from '../../assets/arrow_back.svg';
 import next from '../../assets/arrow_forward.svg';
 import { useState } from 'react';
 
-function Slider(data = []) {
+function Slider({ pictures = [] }) {
     const [currentIndex, setIndex] = useState(0);
 
     const handlePreviousClick = () => {
         const index =
-            currentIndex === 0 ? data.pictures.length - 1 : currentIndex - 1;
+            currentIndex === 0 ? pictures.length - 1 : currentIndex - 1;
         setIndex(index);
     };
 
     const handleNextClick = () => {
         const index =
-            currentIndex === data.pictures.length - 1 ? 0 : currentIndex + 1;
+            currentIndex === pictures.length - 1 ? 0 : currentIndex + 1;
         setIndex(index);
     };
 
@@ -36,11 +36,11 @@ function Slider(data = []) {
             </div>
             <img
                 className={styles.sliderImg}
-                src={data.pictures[currentIndex]}
+                src={pictures[currentIndex]}
                 alt="a"
             />
             <div className={styles.index}>
-                <p>{currentIndex + 1 + '/' + data.pictures.length}</p>
+                <p>{currentIndex + 1 + '/' + pictures.length}</p>
             </div>
         </div>
     );
