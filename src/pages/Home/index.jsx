@@ -18,25 +18,33 @@ const test = [
     'WIFI',
 ];
 
+const fetchData = async () => {
+    const result = await fetch('/logements.json');
+    return await result.json();
+};
+
 function Home() {
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await fetch('logements.json');
-            const jsonResult = await result.json();
-            setData(jsonResult);
-            setLoading(false);
-            console.log(jsonResult);
-        };
-        fetchData();
+        const cachedData = JSON.parse(localStorage.getItem('logementData'));
+        if (!cachedData) {
+            fetchData().then((data) => {
+                localStorage.setItem('logementData', JSON.stringify(data));
+                setData(data);
+            });
+        } else {
+            setData(cachedData);
+        }
+
+        setLoading(false);
     }, []);
     return (
         !isLoading && (
             <div className={styles.home}>
                 <Banner imgSrc={bg} label="Chez vous, partout et ailleurs" />
-                <div style={{ display: 'flex' }}>
+                {/* <div style={{ display: 'flex' }}>
                     <Tag label="dqsdddddddddddddd" />
                     <Tag label="dsdf" />
                 </div>
@@ -52,7 +60,7 @@ function Home() {
                     label="Description"
                     content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laudantium voluptas ullam nemo perspiciatis nihil alias repudiandae voluptatibus porro a sapiente aperiam quidem, impedit tempore, fugit, ducimus molestias eos error fugiat maiores? Minus amet ullam, eum consequuntur nostrum dolore accusantium deleniti numquam provident nulla necessitatibus temporibus aperiam voluptas placeat eligendi.
 "
-                />
+                /> */}
                 <Gallery logementList={data} />
             </div>
         )

@@ -4,6 +4,11 @@
     height: 340px;
     cursor: pointer;
 }
+
+.card:hover {
+    transform: scale(1.05);
+}
+
 .cardImg {
     width: inherit;
     height: inherit;
