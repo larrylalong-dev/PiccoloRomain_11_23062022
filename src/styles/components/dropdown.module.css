@@ -26,6 +26,7 @@
     border-radius: 0 0 10px 10px;
     z-index: -1;
     color: var(--primary-color);
+    padding: 30px;
 }
 
 .dblock {

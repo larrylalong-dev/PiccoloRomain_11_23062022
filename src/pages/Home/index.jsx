@@ -9,6 +9,7 @@ import Banner from '../../components/Banner';
 import Slider from '../../components/Slider';
 import Rating from '../../components/Rating';
 import Avatar from '../../components/Avatar';
+import { fetchData } from '../../helper/helper.js';
 
 const test = [
     'Équipements de base',
@@ -18,11 +19,6 @@ const test = [
     'WIFI',
 ];
 
-const fetchData = async () => {
-    const result = await fetch('/logements.json');
-    return await result.json();
-};
-
 function Home() {
     const [data, setData] = useState([]);
     const [isLoading, setLoading] = useState(true);
@@ -30,7 +26,7 @@ function Home() {
     useEffect(() => {
         const cachedData = JSON.parse(localStorage.getItem('logementData'));
         if (!cachedData) {
-            fetchData().then((data) => {
+            fetchData('/logements.json').then((data) => {
                 localStorage.setItem('logementData', JSON.stringify(data));
                 setData(data);
             });
