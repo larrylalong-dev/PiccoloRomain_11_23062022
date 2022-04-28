@@ -1,8 +1,9 @@
 import styles from '../../styles/components/banner.module.css';
 
-function Banner({ imgSrc, label }) {
+function Banner({ imgSrc, label, mobileHeight = 'md' }) {
+    const styleHeight = mobileHeight === 'sm' ? styles.mobileHeight : '';
     return (
-        <div className={styles.banner}>
+        <div className={styles.banner + ' ' + styleHeight}>
             <img className={styles.bannerImg} src={imgSrc} alt="banner" />
 
             {label && (

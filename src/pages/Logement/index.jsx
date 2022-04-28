@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Avatar from '../../components/Avatar/index.jsx';
 import DropdownList from '../../components/DropdownList/index.jsx';
 import DropdownText from '../../components/DropdownText/index.jsx';
@@ -9,11 +9,11 @@ import Tag from '../../components/Tag/index.jsx';
 import { fetchData } from '../../helper/helper.js';
 import styles from '../../styles/pages/logement.module.css';
 
-//id, title, cover, pictures[], description, host{name, picture}, rating, location, equipments[], tags[]
 function Logement() {
     const { id } = useParams();
-    const [data, setData] = useState({});
+    const [data, setData] = useState();
     const [isLoading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         let cachedData = JSON.parse(localStorage.getItem('logementData'));
@@ -23,17 +23,12 @@ function Logement() {
                 cachedData = data;
             });
         }
+        const data = cachedData.filter((logement) => logement.id === id)[0];
 
-        for (const logement of cachedData) {
-            if (logement.id === id) {
-                console.log(logement);
-                setData(logement);
-                break;
-            }
-        }
+        !data ? navigate('/404') : setData(data);
 
         setLoading(false);
-    }, []);
+    }, [id, navigate]);
 
     return (
         !isLoading && (

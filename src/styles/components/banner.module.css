@@ -31,8 +31,8 @@
 }
 
 @media (max-width: 991.98px) {
-    .banner {
-        height: 111px;
+    .mobileHeight {
+        height: 111px !important;
     }
 
     .bannerLabel {

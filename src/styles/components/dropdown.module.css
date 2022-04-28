@@ -11,6 +11,7 @@
     padding: 10px;
     border-radius: 10px;
     color: white;
+    font-weight: 500;
 }
 
 .arrow {
@@ -27,6 +28,7 @@
     z-index: -1;
     color: var(--primary-color);
     padding: 30px;
+    font-weight: 400;
 }
 
 .dblock {
@@ -35,4 +37,14 @@
 
 .dnone {
     display: none;
+}
+
+@media (max-width: 575.98px) {
+    .label {
+        font-weight: 500;
+    }
+    .list {
+        font-weight: 400;
+        padding: 20px;
+    }
 }
