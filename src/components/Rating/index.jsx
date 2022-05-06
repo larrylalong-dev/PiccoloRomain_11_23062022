@@ -1,4 +1,4 @@
-import styles from '../../styles/components/rating.module.css';
+import styles from './rating.module.css';
 import Star from '../Star';
 
 function Rating({ rate = 0 }) {

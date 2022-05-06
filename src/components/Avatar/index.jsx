@@ -1,4 +1,4 @@
-import styles from '../../styles/components/avatar.module.css';
+import styles from './avatar.module.css';
 
 function Avatar({ host }) {
     const [firstName, lastName] = host.name.split(' ');

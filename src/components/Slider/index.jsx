@@ -1,4 +1,4 @@
-import styles from '../../styles/components/slider.module.css';
+import styles from './slider.module.css';
 import prev from '../../assets/arrow_back.svg';
 import next from '../../assets/arrow_forward.svg';
 import { useState } from 'react';

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/star.module.css';
+import styles from './star.module.css';
 import star from '../../assets/filled_star.svg';
 import emptyStar from '../../assets/empty_star.svg';
 

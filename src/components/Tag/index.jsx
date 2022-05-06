@@ -1,4 +1,4 @@
-import styles from '../../styles/components/tag.module.css';
+import styles from './tag.module.css';
 
 function Tag({ label }) {
     return <div className={styles.tag}>{label}</div>;

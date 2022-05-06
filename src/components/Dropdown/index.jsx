@@ -1,6 +1,6 @@
 import arrowUp from '../../assets/arrow_up.svg';
 import arrowDown from '../../assets/arrow_down.svg';
-import styles from '../../styles/components/dropdown.module.css';
+import styles from './dropdown.module.css';
 import { useState } from 'react';
 
 function Dropdown({ children, label }) {

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/gallery.module.css';
+import styles from './gallery.module.css';
 import Card from '../Card';
 
 function Gallery({ logementList = [] }) {

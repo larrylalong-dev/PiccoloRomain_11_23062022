@@ -7,7 +7,7 @@ import Rating from '../../components/Rating/index.jsx';
 import Slider from '../../components/Slider/index.jsx';
 import Tag from '../../components/Tag/index.jsx';
 import { fetchData } from '../../helper/helper.js';
-import styles from '../../styles/pages/logement.module.css';
+import styles from './logement.module.css';
 
 function Logement() {
     const { id } = useParams();

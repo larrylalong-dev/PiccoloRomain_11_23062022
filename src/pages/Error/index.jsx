@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from '../../styles/pages/404.module.css';
+import styles from './404.module.css';
 
 function Error() {
     return (

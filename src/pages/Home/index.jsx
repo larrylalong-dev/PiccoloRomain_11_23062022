@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Gallery from '../../components/Gallery';
-import styles from '../../styles/pages/home.module.css';
+import styles from './home.module.css';
 import bg from '../../assets/background_home.svg';
 import Banner from '../../components/Banner';
 import { fetchData } from '../../helper/helper.js';

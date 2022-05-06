@@ -1,4 +1,4 @@
-import styles from '../../styles/components/banner.module.css';
+import styles from './banner.module.css';
 
 function Banner({ imgSrc, label, mobileHeight = 'md' }) {
     const styleHeight = mobileHeight === 'sm' ? styles.mobileHeight : '';

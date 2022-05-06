@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner';
 import bg from '../../assets/background_about.svg';
 import DropdownText from '../../components/DropdownText';
-import styles from '../../styles/pages/about.module.css';
+import styles from './about.module.css';
 
 function About() {
     return (
