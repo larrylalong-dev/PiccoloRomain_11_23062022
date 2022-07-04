@@ -4,7 +4,7 @@ import styles from './dropdown.module.css';
 import { useState } from 'react';
 
 function Dropdown({ children, label }) {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const show = isOpen ? styles.dblock : styles.dnone;
 
     return (
