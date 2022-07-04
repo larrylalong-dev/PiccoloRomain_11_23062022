@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner';
-import bg from '../../assets/background_about.svg';
+import bg from '../../assets/bg_about.png';
 import DropdownText from '../../components/DropdownText';
 import styles from './about.module.css';
 

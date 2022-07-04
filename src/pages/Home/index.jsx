@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Gallery from '../../components/Gallery';
 import styles from './home.module.css';
-import bg from '../../assets/background_home.svg';
+import bg from '../../assets/bg_home.png';
 import Banner from '../../components/Banner';
 import { fetchData } from '../../helper/helper.js';
 
