@@ -20,20 +20,24 @@ function Slider({ pictures = [] }) {
 
     return (
         <div className={styles.slider}>
-            <div className={styles.stepContainer}>
-                <img
-                    className={styles.previous}
-                    onClick={handlePreviousClick}
-                    src={prev}
-                    alt="previous"
-                />
-                <img
-                    onClick={handleNextClick}
-                    className={styles.next}
-                    src={next}
-                    alt="next"
-                />
-            </div>
+            {
+                pictures.length > 1 && 
+                <div className={styles.stepContainer}>
+                    <img
+                        className={styles.previous}
+                        onClick={handlePreviousClick}
+                        src={prev}
+                        alt="previous"
+                    />
+                    <img
+                        onClick={handleNextClick}
+                        className={styles.next}
+                        src={next}
+                        alt="next"
+                    />
+                </div>
+            }
+            
             <img
                 className={styles.sliderImg}
                 src={pictures[currentIndex]}
