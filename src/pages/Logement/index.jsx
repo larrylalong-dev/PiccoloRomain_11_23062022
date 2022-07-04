@@ -6,7 +6,7 @@ import DropdownText from '../../components/DropdownText/index.jsx';
 import Rating from '../../components/Rating/index.jsx';
 import Slider from '../../components/Slider/index.jsx';
 import Tag from '../../components/Tag/index.jsx';
-import { fetchData } from '../../helper/helper.js';
+import { getFromCacheOrFetch } from '../../helper/helper.js';
 import styles from './logement.module.css';
 
 function Logement() {
@@ -16,18 +16,11 @@ function Logement() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        let cachedData = JSON.parse(localStorage.getItem('logementData'));
-        if (!cachedData) {
-            fetchData('/logements.json').then((data) => {
-                localStorage.setItem('logementData', JSON.stringify(data));
-                cachedData = data;
-            });
-        }
-        const data = cachedData.filter((logement) => logement.id === id)[0];
-
-        !data ? navigate('/404') : setData(data);
-
-        setLoading(false);
+        getFromCacheOrFetch('logementData', '/logements.json').then(data => {
+            const cachedData = data.filter((logement) => logement.id === id)[0];
+            !cachedData ? navigate('/404') : setData(cachedData);
+            setLoading(false);
+        });
     }, [id, navigate]);
 
     return (
